@@ -22,7 +22,7 @@ Met Office, Météo France.
 The data cannot freely distributed, but access can be requested to Météo France for academic purposes. 
 
 Data can be downloaded from the following web interface of
-[[Metéo France]{.underline}](https://publitheque.meteo.fr/okapi/accueil/okapiWebPubli/index.jsp)
+[Metéo France](https://publitheque.meteo.fr/okapi/accueil/okapiWebPubli/index.jsp)
 site.
 
 To obtain the stations used in the application study in our manuscript,
