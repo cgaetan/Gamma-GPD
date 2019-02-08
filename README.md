@@ -43,9 +43,9 @@ Third-party code
 To efficiently calculate the ellipse intersection area, we follow
 
 Hughes, G. B., and Chraibi, M. (2012), *Calculating ellipse overlap
-areas*, Computing and Visualization in Science, 15, 291--301.*
+areas*, Computing and Visualization in Science, 15, 291--301.
 
-and we use selected part of the code in http://github.com/chraibi/EEOver, namely 
+We used selected part of the code in http://github.com/chraibi/EEOver, namely 
 
 Roots3And4.c, solvers-2.c, solvers.h, config.h, program_constants.h
 
