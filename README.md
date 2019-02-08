@@ -1,7 +1,4 @@
 # Gamma-GPD
----
-Hierarchical space-time modeling of asymptotically independent exceedances
----
 
 This is the repository for the code related to the paper 
 
