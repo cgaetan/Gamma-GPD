@@ -35,7 +35,7 @@ the following identifiers of measurement sites must be requested:
 
 
 
-Third-party code {#code .ListParagraph}
+Third-party code 
 ----
 
 
@@ -51,8 +51,8 @@ Roots3And4.c, solvers-2.c, solvers.h, config.h, program_constants.h
 
 
 
-Instructions for Use {#instructions-for-use .ListParagraph}
---------------------
+Instructions for Use 
+----
 
 Code has been tested on a workstation running a Linux OS
 
