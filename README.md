@@ -1,4 +1,4 @@
-# Gamma-GPD-process
+# Gamma-GPD
 ---
 Hierarchical space-time modeling of asymptotically independent exceedances
 ---
