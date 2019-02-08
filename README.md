@@ -4,8 +4,8 @@ Hierarchical space-time modeling of asymptotically independent exceedances
 ---
 
 This is the repository for the code related to the paper 
-Bacro, J.-N., Gaetan, C., Opitz, T., Toulemonde, G. (2019) *Hierarchical space-time modeling of asymptotically independent exceedances*, 
-Journal of the American Statistical Association, to appear
+
+Bacro, J.-N., Gaetan, C., Opitz, T., Toulemonde, G. (2019) *Hierarchical space-time modeling of asymptotically independent exceedances*, Journal of the American Statistical Association, to appear
 
 Data 
 ----
@@ -57,14 +57,14 @@ Instructions for Use {#instructions-for-use .ListParagraph}
 Code has been tested on a workstation running a Linux OS
 
 
-1\) Install the GSL library. 
+1\) Install the [GSL](https://www.gnu.org/software/gsl/)  library. 
 
 For instance under a Linux Debian
 distribution, open a terminal and type
 
 sudo apt-get install libgsl0ldbl libgsl-dev
 
-For Mac users, please follow the instructions [[here]{.underline}](http://macappstore.org/gsl/) 
+For Mac users, please follow the instructions [here](http://macappstore.org/gsl/) 
 
 2\) Compile the source files and then link all specified object files into a shared object
 
