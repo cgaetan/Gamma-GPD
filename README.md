@@ -49,7 +49,7 @@ Roots3And4.c, solvers-2.c, solvers.h, config.h, program_constants.h
 
 
 
-Instructions for Use 
+Instructions for use 
 ----
 
 Code has been tested on a workstation running a Linux OS
