@@ -36,14 +36,14 @@ the following identifiers of measurement sites must be requested:
 Third-party code 
 ----
 
-
-
-To efficiently calculate the ellipse intersection area, we follow
+We follow
 
 Hughes, G. B., and Chraibi, M. (2012), *Calculating ellipse overlap
 areas*, Computing and Visualization in Science, 15, 291--301.
 
-We used selected part of the code in http://github.com/chraibi/EEOver, namely 
+in order to efficiently calculate the ellipse intersection area.
+
+We used selected part of the code from [their repository](http://github.com/chraibi/EEOver), namely 
 
 Roots3And4.c, solvers-2.c, solvers.h, config.h, program_constants.h
 
