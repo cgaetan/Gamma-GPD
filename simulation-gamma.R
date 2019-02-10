@@ -1,19 +1,25 @@
 rm(list=ls())
+
 source('functions-gamma-simulation-WI.R')
 source('functions-gamma.R')
+
+# we use 6 cores
 library("parallel")
 library("doParallel")
 ncores<-6 # number of cores 
 registerDoParallel(cores=ncores)
+
 nsites<-30 # number of sites
 ntimes<-2000 # number of repetitions 
-prob<-0.90 # Pr(Z <= th)=p where t is the threshold 
+prob<-0.90 # Pr(Z <= th)=p where th is the threshold 
           #  at which the model is estimated
-prob.sim<-0.8  # Pr(Z <= th)=p where t is the threshold 
+prob.sim<-0.8  # Pr(Z <= th)=p where th is the threshold 
           #  at which the data are simulated 
 # we choose  locations in a square [0,1]x[0,1] at random
 xlim<-c(0,1)
 ylim<-c(0,1)
+# times start=1, stop=ntimes
+tlim<-c(1,ntimes) 
 nx<-20
 ny<-20
 x<-seq(xlim[1],xlim[2],length.out = nx)
@@ -21,12 +27,13 @@ y<-seq(ylim[1],ylim[2],length.out = ny)
 coords<-expand.grid(x,y) # we build a grid
 set.seed(1)
 sel<-sample(1:(nx*ny),nsites) 
-coords<-as.matrix(coords[sel,]) # we select nsites points of the grid
+coords<-as.matrix(coords[sel,]) # we randomly select nsites points of the grid
 d<-dist(coords)
 
-tlim<-c(1,ntimes)
 
-# parameters 
+####################################
+# initialization of the parameters #
+####################################
 phi<-pi/4
 semiax1<-0.26
 semiax2<-0.2
@@ -74,13 +81,16 @@ prob.delta<-1 # a simple way for selecting \Delta_S in formula (11), i.e. all di
 delta.coords<-as.numeric(quantile(d,prob=prob.delta))
 delta.times<-10
 delta<-c(delta.coords,delta.times)
-# simulation of the exeedances
+################################
+# simulation of the exeedances #
+################################
 X3D<-gpdrf.gamma3D.WI(x1=x1,y1=y1,z1=z1, model=model.sim, M = M,parallel = TRUE,ncores = ncores) 
 X3D$z[is.na(X3D$z)]<-0
 alldata<-matrix(X3D$z,ntimes,nsites)	
 # parameters to be estimated using maximum CL
 mask<-rep(FALSE,length(param))
 mask[c(3:8)]<-TRUE
+# we stock all results in the list res
 res<-list()
 res$ncores<-ncores
 res$param<-param
@@ -97,13 +107,23 @@ tdata<-t(tdata)
 y<-as.numeric(tdata)
 mask<-res$mask
 delta<-c(delta.coords,delta.times)
-maxit<-2000
+maxit<-2000 # number of iterations for the optimization algorithm
+method<-"Nelder-Mead" # method for optim.   See ?optim for details
+
+#################################
+# estimation of the parameters  #
+#################################
 
 res<-sptgamma.fit(y=y, xcoords = xy[,1], ycoords =xy[,2], tcoords=tcoords,  
                   init = res$param, delta=delta,
-                  threshold = threshold, maxit=maxit,method = "Nelder-Mead",
+                  threshold = threshold, maxit=maxit,method = method,
                   mask=mask,ncores=ncores,
                   nsites =nsites,ntimes=ntimes)
+
+##############
+# comparison #
+##############
+
 # true parameters
 print(param[mask])
 # starting values of the parameters
