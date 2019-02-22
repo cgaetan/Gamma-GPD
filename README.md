@@ -16,7 +16,7 @@ September to November months. Elevations at gauge sites range from 140
 to 1000 meters. Data have been extracted from the database of the French
 Met Office, Météo France.
 
-The data cannot freely distributed, but access can be requested to Météo France for academic purposes. 
+The data cannot be freely distributed, but access can be requested to Météo France for academic purposes. 
 
 Data can be downloaded from the following web interface of
 [Météo France](https://publitheque.meteo.fr/okapi/accueil/okapiWebPubli/index.jsp)
