@@ -43,9 +43,9 @@ areas*, Computing and Visualization in Science, 15, 291--301.
 
 in order to efficiently calculate the ellipse intersection area.
 
-We used selected part of the code from [their repository](http://github.com/chraibi/EEOver), namely 
+We used a selected part of the code from [their repository](http://github.com/chraibi/EEOver), namely 
 
-Roots3And4.c, solvers-2.c, solvers.h, config.h, program_constants.h
+Roots3And4.c, solvers-2.c, solvers.h, zsolve_quartic.c, config.h, program_constants.h
 
 
 
@@ -68,8 +68,7 @@ For Mac users, please follow the instructions [here](http://macappstore.org/gsl/
 
 For instance under  Linux OS open a terminal and type
 
-R CMD SHLIB spt-gamma.c zsolve_quartic.c solvers-2.c Roots3And4.c
--L/usr/lib/x86\_64-linux-gnu -lgsl -lgslcblas
+R CMD SHLIB spt-gamma.c zsolve_quartic.c solvers-2.c Roots3And4.c -lgsl -lgslcblas
 
 
 
