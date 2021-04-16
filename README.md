@@ -2,7 +2,9 @@
 
 This is the repository for the code related to the paper 
 
-Bacro, J.-N., Gaetan, C., Opitz, T., Toulemonde, G. (2019) *Hierarchical space-time modeling of asymptotically independent exceedances*, Journal of the American Statistical Association, to appear
+Jean-Noël Bacro, Carlo Gaetan, Thomas Opitz & Gwladys Toulemonde (2020) Hierarchical Space-Time Modeling of Asymptotically Independent Exceedances With an Application to Precipitation Data, Journal of the American Statistical Association, 115:530, 555-569, DOI: 10.1080/01621459.2019.1617152
+
+
 
 Data 
 ----
