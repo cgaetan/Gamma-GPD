@@ -72,8 +72,9 @@ For instance under  Linux OS open a terminal and type
 
 R CMD SHLIB spt-gamma.c zsolve_quartic.c solvers-2.c Roots3And4.c -lgsl -lgslcblas
 
+R CMD SHLIB  gpd-latent.c
 
 
-3\) file simulation-gamma.R contains the code for a simulated example. To run this 
+3\) file simulation-gamma.R contains the code for a simulated example. To run this code, please use
 
 R CMD BATCH simulation-gamma.R
