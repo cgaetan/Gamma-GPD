@@ -123,7 +123,7 @@ void integration2d(double *x, double *y, double *z,  int *n, double *a, double *
 /*
  This function calculates $\Gamma(I_A)=\sum_{j=1}^m u_jI_{\tau_j\in A}(\tau_j)$ in 2D
  */	
-	double  d, val;
+	double  val;
     int i, j;
 
 	for (i = 0; i < *n; i++) {		
